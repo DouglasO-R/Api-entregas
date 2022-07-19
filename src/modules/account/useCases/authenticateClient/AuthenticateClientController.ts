@@ -10,6 +10,6 @@ export class AuthenticateClientController {
         const authenticateClientUseCase = new AuthenticateClientUseCase();
         const result = await authenticateClientUseCase.with({ username, password });
 
-        return response.json(result);
+        return res.json(result);
     }
 }
