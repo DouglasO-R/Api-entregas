@@ -9,7 +9,7 @@ export class CreateDeliveryController {
         const { id_client } = request;
         
         const createDeliveryUseCase = new CreateDeliveryUseCase();
-        const result = createDeliveryUseCase.with({ id_client, item_name });
+        const result = await createDeliveryUseCase.with({ id_client, item_name });
 
         return response.json(result);
     }
