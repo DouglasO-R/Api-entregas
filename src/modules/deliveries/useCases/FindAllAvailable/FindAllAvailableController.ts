@@ -4,7 +4,7 @@ import { FindAllAvailableUseCase } from "./FindAllAvailableDateUseCase";
 
 export class FindAllAvailableController{
 
-    async handle(request:Request,response:Response,next:NextFunction){
+    async handle(request:Request,response:Response){
         const findAllAvailableUseCase = new FindAllAvailableUseCase();
 
         const deliveries = await findAllAvailableUseCase.by();
