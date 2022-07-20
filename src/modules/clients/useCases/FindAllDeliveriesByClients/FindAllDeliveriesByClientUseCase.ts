@@ -1,6 +1,6 @@
 import { prisma } from "../../../../database";
 
-export class FindAllDeliveriesUseCase{
+export class FindAllDeliveriesByClientUseCase{
     async by(id_client:string){
         const deliveries = await prisma.clients.findMany({
             where:{
